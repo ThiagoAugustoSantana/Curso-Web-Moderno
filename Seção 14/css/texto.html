@@ -6,9 +6,13 @@
     <title>Texto</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <style>
-        /* ... */
+        /* Trabalhando com as unidades para Textos: */
         * {
             margin: 0;
+        }
+
+        html {
+            font-size: 28px;
         }
 
         body {
@@ -16,6 +20,76 @@
             flex-direction: column;
             align-items: center;
         }
+
+        div {
+            font-size: 50px;
+        }
+
+        p {
+            /* Valores Padrões: */
+            font-size: 1em; /* Matem o tamanho padrão do browser pois esta relativo a div Pai. */
+            font-size: 100%; /* Matem o tamanho padrão do browser. */
+            font-size: 16px; /* 16px ja é o tamanho padrão do browser, ou seja não ira alterar nada. */
+            font-size: 12pt; /* Equivalente a 16px. */
+        
+            /* Unidades absolutas: */
+            font-size: 100px;
+            font-size: 72pt; /* 72 Pontos equivalente a 1 polegada. */
+            font-size: 1in; /* 1 polegada. */
+
+            /* Unidades relativas: */
+            font-size: 2.2em; /* 2.2 vezes a fonte da referencia mais proxima, nesse caso a da fonte da div externa. */
+            font-size: 2.2rem; /* 2.2 vezes a fonte da referencia maior que é o html. */
+            font-size: 10vh;
+            font-size: 10vw;
+
+            /* Familias de Fontes: */
+            font-family: monospace;
+            /* A fonte Georgia pertence a familia de fontes serif. */
+            /* Ele procura dentro da familia serif a fonte se não encontrar ele usa a fonte padrão dessa familia. */
+            font-family: Georgia, serif; 
+            font-family: Verdana, sans-serif;
+            font-family: 'Indie Flower', cursive;
+
+            /* Propriedades de Fontes: */
+            font-weight: 100; /* Peso da fonte. */
+            font-style: italic;
+            text-transform: uppercase; /* ctrl + espaço para ver mais opções. */
+            /* text-decoration: overline underline line-through; */
+            /* text-decoration: underline; */
+            word-spacing: -10px;
+            word-spacing: 10px;
+            letter-spacing: 20px;
+            line-height: 2.5em;
+            text-align: right;
+            text-align: center;
+            
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            /* background-color: tomato; */
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+
+        .destaque:hover {
+            background: rgb(214, 159, 150);
+            box-shadow: 2px 2px 1px 1px #4d4c4c;
+        }
+
+        /* Lembrando que classe + pseudoclasse tem mais especificidade que apenas a classe. */
+        .destaque:active {
+            box-shadow: none;
+        }
+
     </style>
 </head>
 
