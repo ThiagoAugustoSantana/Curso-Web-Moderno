@@ -4,7 +4,26 @@
     <meta charset="UTF-8">
     <title>Unidades #02</title>
     <style>
-        /* ... */
+        .fora {
+            position: relative;
+            background-color: orange;
+            height: 400px;
+            width: 400px;
+            padding: 50px;
+
+        }
+
+        .dentro {
+            /* Sempre o que o position não é informado, por padrão ele sempre é static. */
+            background-color: mediumvioletred;
+            height: 100px;
+            width: 90%;
+            position: static; /* Irá ocupar apenas o espaço do conteudo. */
+            position: relative; /* Irá ocupar apenas o espaço do conteudo. */
+            /* Nesse caso ele não ocupará so o espaço do conteudo mas tambem ira considerar o espaço do padding. */
+            position: absolute; /* Esta baseado no elemento aterior a ele. */
+            position: fixed; /* Esta baseado no viewport. */
+        }
     </style>
 </head>
 <body>
