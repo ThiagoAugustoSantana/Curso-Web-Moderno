@@ -1,1 +1,1 @@
-Repositorio para arquivos do curso de web moderno da Udemy.
+Repositorio para arquivos do curso de Web Moderno da Udemy.
