@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .seletor {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+
+            /* Multiplos valores */
+            border: solid 5px navy; /* Shorthand property */
+            font-family: Helvetica, sans-serif; /* Alternativas, se a primeira não der certo va para a segunda */
+            
+            /* Podese usar funções preestabelecidas do CSS */
+            width: calc(100% - 100px);
+            background-color: rgb(34, 153, 189);
+        }
+
+        /* Usando uma pseudo-classe */
+        /* O :hover é a pseudo-classe */
+        .seletor:hover {
+            /* display: none; */
+            background-color: orangered;
+        }
+
+        /* Usando um pseudo-elemento */
+        .seletor::first-letter {
+            color: black;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        /* O nome da classe deve seguir um padrão de escrita: */
+        /* dash-case ou camelCase*/
+        /* O nome da classe em CSS é case sensitivi */
+
+
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>

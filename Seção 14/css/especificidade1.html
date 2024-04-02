@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        
+        /*
+            Em linhas gerais:
+
+            1. Regra com !important (Não recomendado)
+            2. Seletores mais especificos
+            3. ÚLtima regra processada (Em caso de empate)
+        
+            EX:
+        */
+
+        p {
+            background-color: #aaa;
+        }
+
+        /* Classe é mais forte que elemento */
+        .observacao {
+            background-color: #5F5;
+            border: dashed 5px;
+            padding: 20px!important;
+            font-size: 40px;
+        }
+
+        /* Esse é mais especifico */
+        p.observacao {
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+            
+        }
+    
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>

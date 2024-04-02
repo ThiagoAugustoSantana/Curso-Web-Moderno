@@ -1,0 +1,84 @@
+<h1>Tabelas</h1>
+
+<!--  
+<table>	    Define uma tabela.
+<th>	    Define uma célula de cabeçalho em uma tabela.
+<tr>	    Define uma linha em uma tabela.
+<td>	    Define uma célula em uma tabela.
+<caption>	Define uma legenda de tabela.
+<colgroup>	Especifica um grupo de uma ou mais colunas em uma tabela para formatação.
+<col>	    Especifica propriedades de coluna para cada coluna dentro de um elemento <colgroup>.
+<thead>	    Agrupa o conteúdo do cabeçalho em uma tabela.
+<tbody>	    Agrupa o conteúdo do corpo em uma tabela.
+<tfoot>	    Agrupa o conteúdo do rodapé em uma tabela.
+colspan     O valor do colspan atributo representa o número de colunas a abranger.
+rowspan     O valor do rowspan atributo representa o número de linhas a abranger.
+-->
+
+
+<!-- Tag para criar tabela -->
+<table>
+    <caption>Produtos</caption> 
+    <!-- Uma tabela tem 3 partes imporatantes: Cabeçalho, Corpo e Rodape. -->
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPad</td>
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16445,00</td>
+        </tr>
+        <tr>
+            <td>Samsung S9</td>
+            <td>2649,00</td>
+            <td>8</td>
+            <td>21192,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td> <!-- O colspan define quantas colunas vão ser ocupadas -->
+            <!-- Tambem pode-se usar um rowspan para as linhas-->
+            <td>37637,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- Aplicar um estilo para deixar mais bonito a tabela: -->
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+        border-bottom: solid 3px #444;
+    }
+
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+#Aula 22:
+
+- Ctrl + /  : Selecionar varias linhas e comentar ou descomentar todas de uma vez.
+
+- Tab : Selecinoar varias linhas e ele espaçar(Avançar) todas elas de uma vez.
+
+- Shift + Tab : Selecinoar varias linhas e ele desespaçar(Recuar) todas elas de uma vez.
+
+- Alt + Shift + Seta Baixo : Duplicar a linha de cima(Anterior).
+
+- Ctrl + X : Recorta uma linha, a linha em que esta o cursor.
+
+- Shift + Alt + F ou botão direito : Formata o documento ou 
+
+- Ctrl + d + Com uma palavra selecionada : Seleciona palavras iguais que estão na sequencia do codigo.  

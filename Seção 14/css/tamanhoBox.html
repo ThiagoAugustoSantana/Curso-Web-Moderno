@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho Box</title>
+    <style>
+        body {
+            font-size: 45px;
+            margin: 0px;
+        }
+
+        div {
+            background-color: deepskyblue;
+            width: 100%;
+            height: 300px;
+            /* Ate aqui ele ira ocupar 100% do browser*/
+            /* Com a inclusão do padding ou border o espaço sera maior */
+            padding: 100px;
+            border: solid 20px;
+            /* Forma para considerar o padding e o border como parte da largura e altura:*/
+            /* Ira considerar os 100% de largura a partir da borda. */
+            box-sizing: border-box;
+            /* O box-sizing: content-box; considera apenas a parte do conteudo.*/
+            /* box-sizing: content-box; */
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        O tamanho do Box é...
+    </div>
+</body>
+</html>

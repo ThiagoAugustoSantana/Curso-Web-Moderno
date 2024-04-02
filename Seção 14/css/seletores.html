@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    
+    <!-- Exemplo de seletores em CSS: -->
+    <style>
+
+    /* Seletor Universal: */
+        /* * {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    
+    /* Seletor de Elemento: */
+        /* body {
+            color: #ff0;
+            background-color: #f77;
+        }   */
+        
+        
+    /* Seletor varios Elementos: */
+    /* Vai aplicar tanto para todas as tags p quanto para todas as tags ul */
+        /* p, ul {
+            color: #ff0;
+            background-color: #f77;
+        }   */
+
+
+    /* Seletor de Classe: */
+        /* .tag {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    /* Seletor de ID: */
+        /* #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    /* Seletor de Atributo Ex1: */
+        /* [feira] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    /* Seletor de Atributo Ex2: */
+        /* [feira=casa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    /* Seletor de Atributo Ex3: */
+    /* Forma caso o atributo tenha mais de uma palavra */
+        /* [feira~=escritorio] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+        
+
+    /* Seletor de Atributo Ex4: */
+    /* Forma para pegar os atributos que possuem as letras, silabas ou palavras informadas */
+        /* [feira*=sa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Seletor Combinado (Filho Direto): */
+    /* Pega o elemento diretamente dentro do elemento que possui id informado */
+        /* #aninhado > div { /* Não funcionaria trocar a div para o section dentro dessa div 
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    /* Seletor Combinado (Descendente): */
+    /* Pega qualquer descendente informado (section) dentro do elemento que possui id informado */
+        /* #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    /* Seletor Combinado (Irmãos adjacentes): */
+    /* Pega o elemento informado (ul) que esta diretamente apos o primeiro elemento informado (p) */
+        /* p + ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+        
+        
+    /* Seletor Combinado (Irmãos Gerais): */
+    /* Pega de forma geral o elemento informado (ol) que esta dentro do primeiro elemento informado (p) */
+        /* p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+    
+    
+    /* Seletor  Filho Expecifico: */
+    /* Procura em todas as tags um span que seja o primeiro filho de alguem. */
+        /* span:nth-child(1) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    /* Combinação de Seletores: */
+    /* Procura dentro de uma section todos os filhos de ordem impares. */
+        /* section > :nth-child(odd) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    
+    /* Combinação de Seletores: */
+    /* Pega o segundo elemento dentro da section que representa um span. */
+        /* section > span:nth-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <!-- O primeiro filho do section é o label que foi criado, por isso deve-se retira-lo -->
+                    <section class='tag nolabel'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

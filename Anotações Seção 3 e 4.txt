@@ -1,0 +1,272 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 23:
+
+- Forma de declara uma variavel(Não é a forma mais usual atualmente), ver exercicio "dados_1" seção 3, Ex:
+	
+	var nome(Identificador) = valor;
+
+- O identificador é o nome que se da a varial, a forma como se identifica a variavel.
+
+- Forma de declara uma variavel(É a forma mais usual atualmente), ver exercicio "dados_1" seção 3, Ex:
+	
+	let nome = valor; 
+
+- Nome de variaveis devem ser com letras minusculas, quando forem formados por mais de uma palavra a segunda palavra devera começar com letra 
+maiuscula,ver exercicio "dados_1" seção 3, Ex: 
+
+	var precoFinal = 6;
+
+- JS é Case Sensitivity.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 24:
+
+- Exemplo de concatenação ver exercicio "dados_2" seção 3.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 25:
+
+- typeof serve para mostrar o tipo de algum elemento, ver exercicio "dados_3" seção 3.
+
+- Em JS todo numero é do tipo number.
+
+- Exemplo de variavel Booleana ver exercicio "dados_3" seção 3.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 26:
+
+- Para declarar constantes em JS so existe uma forma que é com o uso do 'const', o valor não podera ser modificado na sequencia do programa, 
+ver exercicio "dados_4" seção 3, Ex:
+
+	const NOME(Identificador) = valor;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 27:
+
+- Convenciona-se a escrever nome de constantes com todas as letras maiuscula.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 28:
+
+- Exemplo de uso do PI do proprio JS, ver desafio "desafio_area" seção 3.	
+	
+	Math.PI
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 38:
+
+- Com "var" pode-se declarar mais de uma vez uma variavel, com "let" isso não é possivel, ocorre um erro.
+
+- Utilizar constantes é melhor do que variaveis, usar sempre que for possivel.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 39:
+
+- JS é uma linguagem de tipagem dinamica (tipagem fraca), não ha nescessidade de declarar o tipo da variavel, Ex: (int, float, string )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 40:
+
+- Para fixar o numero de casas decimais usar o ".toFixed()", ver exercicio "numeros" seção 4, Ex: 
+
+	console.log(media.toFixed(2))
+
+- Para converter um numero para String deve-se usar o comando ".toString()", com o mesmo comando tambem é possivel converter para a forma decimal, octal
+e hexadecimal em String, ver exercicio "numeros" seção 4, Ex: 
+
+	let a = 34
+	a = a.toString()
+		ou
+	a = a.toString(2) //Forma Binaria
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 41:
+
+- Em JS existe o tipo "Infinity" então não ira gerar erros ao dividir por zero, ver exercicio "numerosAlgunsCuidados" seção 4. 
+
+- Ver exercicio "numerosAlgunsCuidados" seção 4 para conferir todos os cuidados ao se trabalhar com dados do tipo "number".
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 42:
+
+- Exemplo de uso do objeto Math, ver exercicio "math" seção 4.
+
+- Exemplo de uso do PI e de exponenciação, ver exercicio "math" seção 4, Ex: 
+
+	Math.PI
+	Math.pow(raio,2) // Exponenciação elevado a 2.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 43:
+
+- Exemplos de usos com strings, ver exercicio "strings" seção 4, Ex:
+	
+	.charAt()
+	.charCodeAt()
+	.indexOf()
+	.substring()
+	.concat()
+	.replace()
+	.split()
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 44:
+
+- Exemplos de uso do Template Strings, ver exercicio "templatStrings" seção 4.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 45:
+
+- Exemplos de uso de dados booleanos, ver exercicio "booleanos" seção 4.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 46:
+
+- Exemplos de uso de arrays, ver exercicio "arrays" seção 4.
+
+- Um array em JS não tem tamanho fixo e pode conter diferentes tipos de dados no mesmo array (numeros, strings...).
+
+- Elementos de um array são separados por virgula, Ex:
+
+	const valores = [7.7, 8.9, 6.3, 9.2] 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 47:
+
+- Noções basicas de objetos em JS, ver exercicio "objeto" seção 4.
+ 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 48:
+
+- Logica de endereçamento na memoria dados de tipos primitivos vs objetos, ver exercicio "nullUndefined" seção 4.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 50:
+
+- Exemplo basico de função em JS, ver exercicio "funcao1" seção 4, Ex:
+
+	Função sem retorno,
+	Função com retorno,
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 51:
+
+- Armazenando uma função em uma variavel ou constante, ver exercicio "funcao2" seção 4.
+
+- Exemplo de Função sem nome.
+
+- Exemplo de Função arrow.
+
+- Exemplo de Função arrow com retorno implicito.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 52:
+
+- Tentar não definir as variaveis "var" como sendo globais.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 54:
+
+- Diferença de "var" e "let", ver exercicio "usandoLet1" seção 4.
+
+- O escopo do let vale dentro de blocos mesmo eles não sendo de funções.
+	
+	escopo "var": Global e de função.
+ 
+	escopo "let": Global, de função e de bloco. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aulas 55, 56, 57 e 58:
+
+- Diferença de "var" e "let" no "loop for", ver exercicios "usandoVarEmLoop1", "usandoLetEmLoop1", "usandoVarEmLoop2" e "usandoLetEmLoop2" seção 4.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 59:
+
+- Hoisting seria a elevação do codigo, ver exercicio "hoisting" seção 4.
+
+- Não utilizar esse tipo de estrategia.
+
+- O hoisting so acontece com o "var", no "let" gera um erro.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 62:
+
+- Exemplo de notação ponto, ver exercicio "notacaoPonto" seção 4. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+TIPOS DE OPERADORES:
+
+#Aula 63:
+
+- Operadores: Atribuição,  ver exercicio "atribuicao" seção 4, Ex:
+	
+	b += a
+	b -= 4
+	b *= 2
+	b /= 2
+	b %= 5
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aulas 64, 65, 66 e 67:
+
+- Operadores: Destructuring, ver exercicios "destructuring1", "destructuring2", "destructuring3" e "destructuring4" seção 4, Ex: 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 68:
+
+- Operadores: Aritméticos, ver exercicio "aritmeticos" seção 4, Ex:
+
+	soma = a + b + c + d
+	subtracao = d - b
+	multiplicacao = a * b
+	divisao = d / a
+	modulo = a % 2
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 69:
+
+- Operadores: Relacionais, ver exercicio "relacionais" seção 4, Ex:
+
+	'1' == 1
+	'1' === 1
+	'3' != 3
+	'3' !== 3
+	3 < 2
+	3 > 2
+	3 <= 2
+	3 >= 2	
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 70:
+
+- Operadores: Lógicos, ver exercicio "logicos" seção 4, Ex:
+
+	OU -> ||
+	E -> &&
+	XOR -> ^ 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 71:
+
+- Operadores: Unários, ver exercicio "unarios" seção 4.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 72:
+
+- Operadores: Ternário, ver exercicio "ternario" seção 4, Ex:
+
+	nota >= 7 ? 'Aprovado' : 'Reprovado'
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#Aula 73:
+
+- Exemplos das diferenças entre trabalhar no Node e Browser, ver exercicio "experimentos" seção 4.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+

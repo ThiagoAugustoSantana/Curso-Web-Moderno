@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+
+        /* O float não é mais uma boa abordagem, melhor usar flexbox! */
+        body {
+            background-color: #222;
+        }
+
+        .c1 {
+            background-color: red;
+            /* Gera um problema dos outros elementos disconsiderarem esse float.*/
+            float: right;
+        }
+
+        .c2 {
+            background-color: green;
+            /* Forma de considerar o float de c1:*/
+            clear: right;
+            float: left;
+        }
+        
+        .c3 {
+            background-color: blue;
+            /* clear: right; */
+            /* clear: left; */
+            clear: both;
+        }
+
+        .c4 {
+            background-color: orange;
+            float: right;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+            /* float: right; */
+            /* float: left; */
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+
+</html>

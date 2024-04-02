@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Origem CSS: Externo, Interno e Inline</title>
+    <!-- Exemplo de CSS interno:-->
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+    </style>
+
+    <!-- Exemplo de CSS externo:-->
+    <link rel="stylesheet" href="css/externo.css">
+    <!-- 
+        A ordem de preferencia sera a ultima a ser aplicada, nesse caso o link 
+        vem primeiro pois é o ultimo a ser aplicado, sobrepondo o style. 
+    -->
+</head>
+
+<!-- Exemplo de CSS inline:-->
+<!-- Não é uma boa pratica colocar propriedades CSS inline. -->
+<body style="background-color: coral;">
+    <h1>E agora?</h1>
+</body>
+
+</html>
