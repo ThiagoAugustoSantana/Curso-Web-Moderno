@@ -5,7 +5,33 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        /* Um px não é diretamente um pixel da tela, ha um calculo por tras. */
+        .unidades-absolutas {
+            /* O position: absolute não tem relação direta com unidades absolutas. */
+            position: absolute;
+            /* O px é o mais usado em unidades absolutas.*/
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #222;
+            margin: 30px;
+            width: 4cm; /* Unidades pouco usadas. */
+            height: 20mm; /* Unidades pouco usadas. */
+            top: 150px; /* Funciona por causa do position: absolute. */
+            left: 200px; /* Funciona por causa do position: absolute. */
+        }
+
+        .unidades-relativas {
+            position: absolute;
+            font-size: 4em; /* 4 vezes o valor da fonte do elemento pai. */    
+            padding: 5%;
+            border: solid 1vw #222;
+            margin: .8%;
+            width: 20vw; /* 20 vezes a largura do viewport*/
+            height: 15vh; /* 15 vezes a altura do viewport*/
+            bottom: 5%;
+            right: 5%;
+        }
+
     </style>
 </head>
 
