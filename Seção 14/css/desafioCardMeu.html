@@ -6,51 +6,65 @@
     <title>Desafio Card</title>
     <style>
         
+        * {
+            box-sizing: border-box;
+        }
+        
         .curso {
-            /* Pode-se usar o float para colocar na mesma linha. */
-            /* float: left; */
+            position: relative;
             display: inline-block;
+            width: 270px;
+            height: 320px;
             vertical-align: top;
-            font-family: Verdana, sans-serif;
-            border: solid 1px #CCC;
-            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
-            height: 300px;
-            width: 260px;
-            margin: 5px 20px;
+            margin: 20px;
             padding: 5px;
+            border: solid 1px #c9c9c9;
+            box-shadow: 0px 7px 5px 5px #d5d5d5;
+            font-family: sans-serif;
         }
 
         .curso img {
+            position: relative;
             width: 100%;
-            max-height: 50%;
         }
 
         .curso-info {
-            padding: 10px;
-            height: 90px;
-            overflow: hidden;
+            vertical-align: top;
         }
 
         .curso-info h4 {
-            font-size: 1.4em;
-            font-weight: 100;
-            margin: 0px;
+            font-size: 23px;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .curso-info p {
+            font-size: 17px;
+            font-weight: bolder;
+            padding: 10px;
+            margin: 0;
         }
 
         .curso-preco {
-            float: right;
-            padding: 10px;
+            padding-right: 10px;
+            font-weight: bolder;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
         }
 
         .preco-de {
+            color: rgb(201, 5, 5);
+            padding: 1px;
+            font-size: 18px;
             text-decoration: line-through;
-            color: firebrick;
         }
 
         .preco-por {
-            color: green;
-            font-weight: bold;
-            font-size: 1.4em;
+            color: rgb(2, 112, 2);
+            padding: 1px;
+            font-size: 25px;
+
         }
 
     </style>
