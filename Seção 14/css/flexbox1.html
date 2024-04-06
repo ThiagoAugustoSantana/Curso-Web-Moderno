@@ -6,7 +6,71 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* Quando se defini um elemento como display flex, ele passa a ser um flex container e os elementos dentro dele passam a ser flex item. Para o flex container deve-se definir um main axis e um cros axis assim como seus tamanhos, começo e fim. */
+
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big {
+            font-size: 1.5em;  
+        }
+
+        .flex-container {
+            /* O main axis por padrão é o eixo da linha */
+            display: flex;
+            /* Muda o main axis para a coluna/vertical */
+            flex-direction: column;
+            /* Muda o main axis para a coluna e reverte a ordem na coluna */
+            flex-direction: column-reverse;
+            /* Muda o main axis para a linha e reverte a ordem na linha */
+            flex-direction: row-reverse;
+            /* Muda o main axis para a linha */
+            flex-direction: row;
+            /* Vai passar do tamanho do container */
+            width: 50%;
+            height: 200px;
+            /* Para quebrar a linha */
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+            /* Misturar o flex-direction com flex-wrap */
+            flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse wrap;
+            flex-flow: row wrap;
+
+            /* Justificar o conteudo: */
+            /* Como o main axis esta na linha, o justify ira justificar pelo inicio ou o fim da linha */
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            /* Justifica colocando espaço envolta dos elementos */
+            justify-content: space-around;
+            /* Justifica colocando espaço entre os elementos */
+            justify-content: space-between;
+
+            /* Alinhamentos no cros axis: */
+            height: 400px;
+            /* Alinhamento padrão */
+            align-items: stretch;
+            /* Aliando pela linha de base dos items */
+            align-items: baseline;
+            /* Alinhando pelo inicio do flex item */
+            align-items: flex-start;
+            /* Alinhando pelo final do flex item */
+            align-items: flex-end;
+            /* Alinhamento centralizado */
+            align-items: center;
+
+            /* Alinhamento com mais de uma linha: */
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+        }
+
     </style>
 </head>
 
