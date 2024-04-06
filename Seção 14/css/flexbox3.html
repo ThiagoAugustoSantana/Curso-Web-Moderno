@@ -4,9 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox #03</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <!-- <link rel="stylesheet" href="css/tag.css"> -->
     <style>
-        /* ... */
+       
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+        }
+
+        .flex-container div {
+            /* Dimensão de um elemento dentro do container, no main axis*/
+            flex-basis: 100px;
+            /* O flex-basis é mais forte que o width e o height*/
+            width: 200px; /* Vai perder */
+        }
+
+        .flex-container div:nth-child(4) {
+            /* Usando shortcuts(propriedade de atalho): */
+            /* No flex ja se definini de uma vez o grow, shrink e o basis  */
+            flex: 3 6 100px;
+        }
+
+        .flex-container {
+            width: 300px;
+            width: 600px;
+        }
+
     </style>
 </head>
 
