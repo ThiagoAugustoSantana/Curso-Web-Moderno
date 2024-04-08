@@ -20,6 +20,40 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* Ira gerar 3 linhas mesmo que não pareça as outras duas */
+            grid-template-rows: repeat(3, 1fr);
+            /* Pode-se nomear as divisorias das celulas, inclusive dando mais de um nome para cada */
+            grid-template-columns: [inicio] 1fr [metade-1 meio-1] 1fr [metade-2 meio-2] 1fr [fim];
+
+            /* Aplicando gaps(espaços) entre as celulas: */
+            column-gap: 20px;
+            row-gap: 20px;
+            /* Shortcut */
+            /* gap: Linhas Colunas */
+            gap: 50px 10px;
+            /* Para linhas e colunas */
+            gap: 10px;
+        }
+
+        .d1 {
+            /* Usando rpopriedades com os nomes das divisorias: */
+            grid-column-start: metade-2;
+            grid-column-end: fim;
+            /* Shortcut, coloca-se de uma unica vez o start e o end, necessario usar a / */
+            grid-column: meio-1 / fim;
+            /* Ira começar na linha 1 e final mais 2 */
+            grid-row: 1 / span 2;
+
+            /* Usando grid-area: */
+            /* Ordem de definição: 
+            grid-area: row-start column-start row-end column-end */
+            grid-area: 1 / meio-1 / span 3 / fim;
+        }
+
     </style>
 </head>
 

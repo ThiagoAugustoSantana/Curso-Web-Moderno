@@ -22,6 +22,70 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            /* Template para colunas: */
+            /* Definir tamanho de colunas: */
+            grid-template-columns: 50% 50%;
+            /* Pode-se usar um fator de repetição: */
+            /* Nesse caso se tera 12 colunas, 4 vezes os 3 termos. */
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            grid-template-columns: repeat(12, 8.33%);
+            grid-template-columns: repeat(4, 8.33%);
+            /* Repete 11 vezes e faz um complemento externo ao repeat. */
+            grid-template-columns: repeat(11, 100px) 100px;
+            /* grid-template-columns: minmax(100px, 300px); */
+
+            /* 3 colunas, uma com 200px, outra com 20% do tamanho total do body e 1 fragmento(nesse caso vai pegar o resto de espaço) */
+            grid-template-columns: 200px 20% 1fr;
+            grid-template-columns: 3fr 6fr 3fr;
+
+            /* Template para linhas: */
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            /* A primeira linha vai ter 100px, a segunda vai pegar o maximo de espaço e a terceira e quarta vão ficar limitadas ao tamanho de seus conteudos */
+            grid-template-rows: 100px 1fr;
+            /* O auto vai dividir de forma igualitaria */
+            grid-template-rows: auto;
+            grid-template-rows: 100px auto;
+        }
+
+        /* Mecher apenas em 1 elemento: */
+        .d8 {
+            /* Por colunas: */
+            /* Começa na linha 2 e termina na linha 4 */
+            grid-column-start: 2;
+            grid-column-end: 4;
+            /* De onde começa mais duas linhas, da no mesmo resultado anterior */
+            grid-column-end: span 2;
+
+            /* Por linhas: */
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-row-end: span 2;
+        }
+
+        /* Existe sobreposição de celulas: */
+        .d10,
+        .d11 {
+            /* Podem se sobrepor */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        /* Definir o elemento que ira ficar por cima na sobreposição: */
+        .d10 {
+            /* Funciona com sistema de pesos, o elemento com peso maior fica na frente. */
+            /* Com valor 1 fara esse elemento ficar na frente. */
+            z-index: 1;
+            /* Com valor 0 ainda fara esse elemento ficar na frente. */
+            z-index: 0;
+            /* Com valor -1 fara esse elemento ficar na atras. */
+            z-index: -1;
+        }
+
     </style>
 </head>
 
