@@ -41,6 +41,7 @@
             flex-flow: row wrap;
 
             /* Justificar o conteudo: */
+            /* O justify-content funciona sobre o main axis. */
             /* Como o main axis esta na linha, o justify ira justificar pelo inicio ou o fim da linha */
             justify-content: flex-start;
             justify-content: flex-end;
@@ -52,9 +53,10 @@
 
             /* Alinhamentos no cros axis: */
             height: 400px;
+            /* O align-items funciona no cros axis. */
             /* Alinhamento padrão */
             align-items: stretch;
-            /* Aliando pela linha de base dos items */
+            /* Aliando pela linha de base dos items, base do texto de cada item. */
             align-items: baseline;
             /* Alinhando pelo inicio do flex item */
             align-items: flex-start;
