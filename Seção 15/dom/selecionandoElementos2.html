@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>
+        // Formas de selecionar elementos da DOM:
+
+        // Selecionar elemento com querySelector e querySelectorAll:
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        const selecionar = seletor => {
+            //  O querySelectorAll não retorna um html colection, mas sim um nodelist, pode-se utilizar as mesmas conversões para um array para poder manipula-lo.
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        }
+
+        const deselecionar = seletor => {
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+        }
+
+        selecionar('div')
+
+        deselecionar('*') // O * é um seletor universal.
+
+        selecionar('.terceiro.ultimo')
+
+        deselecionar('*')
+
+        selecionar(':not(#primeiro)')
+
+        deselecionar('*')
+
+        selecionar(':nth-child(1)')
+
+        deselecionar('*')
+
+        selecionar('div:nth-of-type(1)')
+
+        deselecionar('*')
+
+        // Selecionar elemento a partir de um atributo criado para ele.
+        selecionar('[wb-attrib]')
+    </script>
+</body>
+
+</html>

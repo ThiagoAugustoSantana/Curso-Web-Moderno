@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+        // Formas de selecionar elementos da DOM:
+
+        // Selecionar elemento pelo id:
+        // Não precisa do # pois ja é esperado um id.
+        document.getElementById('primeiro').classList.add('destaque')
+
+        // Selecionar elementos pelo nome da tag:
+        const divs = document.getElementsByTagName('div')
+        console.log(divs)
+        // Transformando o HTML colection em um array para poder manipular.
+        Array.from(divs).forEach(element => {
+            element.classList.remove('destaque')
+        })
+        // Transformando o HTML colection em um array com o operador spread.
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        // Selecionar elementos pelo nome da classe da tag:
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        console.log(ultimosElementos)
+        for (let e of ultimosElementos) {
+            e.classList.remove('destaque')
+        }
+    </script>
+</body>
+
+</html>
