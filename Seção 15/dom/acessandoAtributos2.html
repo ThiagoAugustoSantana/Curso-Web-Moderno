@@ -10,14 +10,41 @@
 <body class='conteudo exercicio'>
     <div>
         <label for="compras">Compras</label>
-        <ul id="compras" destino='escritório' data-urgencia="5">
+        <ul id="compras" destino='escritório' data-urgencia="5" data-blabla="opa">
             <li>Café</li>
             <li>Água</li>
             <li>Copo Descartável</li>
         </ul>
     </div>
     <script>
-        // ...
+        // const lista = document.querySelector('#compras') // Forma mais facil utilizando apenas o id.
+
+        // Seletor muito especifico, seleciona uma div que tem uma ul com atributo personalizado destino cujo seu valor é igual a escritório. 
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log('Elemento "ul".....................')
+        console.log('childNodes', lista.childNodes)
+        console.log('id', lista.id)
+        console.log('destino', lista.destino) // Não reconhece pela notação ponto as propriedades personalizados.
+        console.log('getAttribute', lista.getAttribute('destino')) // getAttribute considera as propriedades personalizadas.
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa') // Seta um novo valor para um atributo existente.
+        lista.setAttribute('status', 'aberto') // Seta um novo atributo com valor.
+        lista.removeAttribute('destino')
+
+        // Diferença dos atributos personalizados com "data-":
+        // Por padrão é esperado que os atributos personalizados comecem com "data-" mais o nome.
+        console.log(lista.dataset)
+        console.log(lista.dataset.urgencia)
+        // lista.data-urgencia // Forma errada.
+        lista.dataset.urgencia = 4
+        console.log(lista.getAttribute('data-urgencia'))
+
+        // Cuidado:
+        const label = document.querySelector('label')
+        console.log(label.for) // O for é palavra reservada.
+        console.log(label.htmlFor) // Jeito certo.
+        console.log(label.getAttribute('for')) // Jeito certo.
+
     </script>
 </body>
 
