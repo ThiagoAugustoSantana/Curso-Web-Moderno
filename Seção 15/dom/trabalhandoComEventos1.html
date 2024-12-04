@@ -9,9 +9,34 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- Primeira forma: -->
+        <!-- Tem que passar com nome event mesmo, pois event existe, passa o evento como parametro. -->
+        <!-- <a href="https://google.com.br" onclick="navegarEm5s(event)">Google</a> -->
+
+
+        <!-- <a href="https://google.com.br">Google</a> -->
+
+        <a espera-um-pouco="" href="https://google.com.br">Google</a>
     </div>
     <script>
-        // ...
+        function navegarEm5s(e) {
+            e.preventDefault()
+            // O método preventDefault() cancela o evento se ele for cancelável, o que significa que a ação padrão que pertence ao evento não ocorrerá.
+            // preventDefault() ira cancelar o evento padrão do click no link para esse caso. 
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+                // window.location.href retorna o href (URL) da página atual, nesse caso esta sendo alterada.
+            }, 5000)
+        }
+
+        // Segunda forma:
+        // const a = document.querySelector('a')
+        // a.onclick = navegarEm5s
+
+        // Terceira forma, usando atributo personalizado:
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
     </script>
 </body>
